@@ -3,6 +3,21 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+html::-webkit-scrollbar {
+  background-color: transparent;
+  width: 7px;
+}
+/* html::-webkit-scrollbar-track {
+  background-color: gray;
+} */
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(30, 143, 255, 0.568);
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: dodgerblue;
 }
 header {
   position: sticky;
@@ -14,6 +29,11 @@ header {
   width: 100%;
   padding: 10px 50px;
   background-color: white;
+  box-shadow: 4px 4px 20px rgba(15 54 55/10%);
+  z-index: 200;
+}
+header a {
+  color: black;
 }
 nav ul {
   list-style: none;
@@ -22,9 +42,12 @@ nav ul li {
   display: inline-block;
   margin-right: 20px;
   padding: 10px;
+  cursor: pointer;
 }
+
 nav ul li:hover,
-.titre a {
+.titre a,
+li a:hover {
   color: white;
   background-color: dodgerblue;
   border-radius: 4px;
@@ -37,13 +60,13 @@ header .fa-bars {
   align-items: center;
   justify-content: space-between;
   min-height: 95vh;
-  /* box-shadow: 0px -7px 20px 0px #00000008; */
 }
 .titre {
   padding: 60px;
 }
 .home img {
   min-width: 500px;
+  transform: translateY(-5vh);
 }
 .titre a {
   padding: 5px 41px;
@@ -147,10 +170,16 @@ footer {
     display: block;
     font-size: 23px;
   }
+  header {
+    padding: 10px 13px;
+  }
   .home {
     padding-top: 100px;
 
     flex-direction: column-reverse;
+
+    justify-content: flex-end;
+    gap: 165px;
     min-height: 90vh;
     max-width: 500px;
     margin: auto;
@@ -179,3 +208,12 @@ footer {
     max-width: 80vw;
   }
 }
+/*  NOTES : 
+
+        flex : flex-shrink and flex-grow and flex-basis
+        
+      you have to learn about :
+      1. object-fit
+      2. object-position
+      
+      learn about how to make a custom scroll bar */
