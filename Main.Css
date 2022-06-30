@@ -8,13 +8,14 @@
 }
 html::-webkit-scrollbar {
   background-color: transparent;
-  width: 7px;
+  width: 8px;
 }
 /* html::-webkit-scrollbar-track {
   background-color: gray;
 } */
 html::-webkit-scrollbar-thumb {
   background-color: rgba(30, 143, 255, 0.568);
+  border-radius: 10px;
 }
 html::-webkit-scrollbar-thumb:hover {
   background-color: dodgerblue;
@@ -44,7 +45,9 @@ nav ul li {
   padding: 10px;
   cursor: pointer;
 }
-
+ul li:hover a {
+  color: white;
+}
 nav ul li:hover,
 .titre a,
 li a:hover {
@@ -173,6 +176,26 @@ footer {
   header {
     padding: 10px 13px;
   }
+  nav {
+    display: none !important;
+    position: absolute;
+    left: 0;
+    top: 57px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 4px 4px 20px rgb(15 54 55 /20%);
+  }
+  nav ul li:hover {
+    background-color: dodgerblue;
+    color: white;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
   .home {
     padding-top: 100px;
 
@@ -207,7 +230,21 @@ footer {
   .Contact img {
     max-width: 80vw;
   }
+  :checked ~ nav {
+    display: block !important;
+  }
 }
+input {
+  display: none;
+}
+header i {
+  transition: 0.5s;
+}
+header input:checked + label i {
+  transform: rotate(90deg);
+  color: dodgerblue;
+}
+
 /*  NOTES : 
 
         flex : flex-shrink and flex-grow and flex-basis
