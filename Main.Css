@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  background-color: white;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px;
+}
+nav ul li:hover,
+.titre a {
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 4px;
+}
+header .fa-bars {
+  display: none;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 95vh;
+  /* box-shadow: 0px -7px 20px 0px #00000008; */
+}
+.titre {
+  padding: 60px;
+}
+.home img {
+  min-width: 500px;
+}
+.titre a {
+  padding: 5px 41px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 37px;
+}
+.titre h1 {
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 10px;
+}
+.titre p {
+  color: gray;
+  font-style: italic;
+}
+.services {
+  padding: 100px;
+}
+.services .serv-info {
+  margin: auto;
+  width: 50vw;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.serv-info h1 {
+  margin-bottom: 10px;
+}
+.serv-info p {
+  color: gray;
+}
+.services .blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.services .blocks div {
+  border: 1px solid black;
+  border-radius: 4px;
+
+  /* width: 45vw; */
+  padding: 40px;
+  text-align: center;
+}
+.blocks img {
+  width: 60%;
+}
+.blocks div h1 {
+  margin-bottom: 20px;
+}
+.blocks div p {
+  line-height: 24px;
+}
+.blocks a {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+  padding: 10px 20px;
+  font-size: 20px;
+
+  border-radius: 4px;
+}
+.blocks a:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+.Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Contact img {
+  max-width: 800px;
+  display: inline-block;
+  margin: auto;
+  display: block;
+}
+.Contact .icons {
+  text-align: center;
+  font-size: 25px;
+  word-spacing: 40px;
+  margin-top: 20px;
+}
+.icons i:hover {
+  color: dodgerblue;
+}
+footer {
+  width: 100%;
+  background-color: dodgerblue;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  margin-top: 50px;
+  font-family: cursive;
+  font-size: 13px;
+}
+@media (max-width: 998px) {
+  header .fa-bars {
+    display: block;
+    font-size: 23px;
+  }
+  .home {
+    padding-top: 100px;
+
+    flex-direction: column-reverse;
+    min-height: 90vh;
+    max-width: 500px;
+    margin: auto;
+  }
+  .home img {
+    max-width: 75vw;
+    min-width: 370px;
+  }
+  .services {
+    padding: 40px;
+  }
+  .services .blocks {
+    grid-template-columns: 1fr;
+  }
+  .titre {
+    padding: 20px;
+    width: 90vw;
+  }
+  nav {
+    display: none;
+  }
+  .services .serv-info {
+    min-width: 325px;
+  }
+  .Contact img {
+    max-width: 80vw;
+  }
+}
